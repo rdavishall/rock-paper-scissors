@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Permanent Marker', cursive;
+  background: #f6f6f6;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 72px;
+  font-weight: 300;
+}
+
+.players {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.players h2{
+  font-size: 40px;
+  width: 300px;
+  text-align: center;
+}
+
+.human{
+  margin-left: 100px;
+}
+
+.computer{
+  margin-right: 100px;
+}
+
+.flex-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 800px;
+  margin: auto;
+}
+
+.flex-container .left-side,
+.flex-container .right-side{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-gap: 20px;
+margin: 0 40px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.button {
+  width: 100%;
+  height: 100%;
+  
+}
+
+.score {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 50px;
+}
