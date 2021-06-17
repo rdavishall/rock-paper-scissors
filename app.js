@@ -69,9 +69,9 @@ function playRound() {
   }
 
   // Add score and text into HTML document
-  document.getElementById('human-score').innerHTML = humanScore;
-  document.getElementById('cpu-score').innerHTML = cpuScore;
-  document.getElementById('text-content').innerHTML = gameText;
+  document.getElementById('human-score').textContent = humanScore;
+  document.getElementById('cpu-score').textContent = cpuScore;
+  document.getElementById('text-content').textContent = gameText;
 }
 // Select Human Choice with Click
 buttons.forEach((button) => {
@@ -93,9 +93,9 @@ rotateImgs.forEach((rotateImg) => {
 
 // Restart Game
 restart.addEventListener('click', () => {
-  document.getElementById('human-score').innerHTML = 0;
-  document.getElementById('cpu-score').innerHTML = 0;
-  document.getElementById('text-content').innerHTML = "Rock Beats Scissors | Scissors Beats Paper | Paper Beats Rock"
+  document.getElementById('human-score').textContent = 0;
+  document.getElementById('cpu-score').textContent = 0;
+  document.getElementById('text-content').textContent = "Rock Beats Scissors | Scissors Beats Paper | Paper Beats Rock"
   rotateImgs.forEach(rotateImg => rotateImg.classList.remove('noanimation'));
   img.remove();
   cpuButton.remove();
