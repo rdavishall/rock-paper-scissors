@@ -1,0 +1,243 @@
+/* Global Variables */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  background: url("../img/background.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover; 
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+}
+
+body {
+  font-family: 'Permanent Marker', cursive;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 5rem;
+  font-weight: 300;
+}
+
+h2 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 2rem;
+  text-decoration: underline;
+}
+
+p {
+  text-align: center;
+  display: inline;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 75%;
+  height: 75%;
+}
+
+button {
+  width: 200px;
+  height: 200px;
+  font-family: 'Permanent Marker', cursive;
+}
+/* Game */
+#game #human-weapons{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 75vw;
+  margin: auto;
+  justify-items: center;
+}
+
+#game #cpu-weapons {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 75vw;
+  margin: auto;
+  justify-items: center;
+  height: 200px;
+}
+
+#game h2 {
+  text-align: center;
+}
+
+/* Button */
+#human-weapons button,
+#cpu-weapons button{
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+#human-weapons button:hover,
+.restart:hover{
+border: #133083 3px solid;
+background-color: rgba(197, 173, 144, 0.4);
+}
+
+/* Text Content */
+#text {
+  align-items: center;
+  text-align: center;
+  font-size: 1.5vw;
+}
+
+/* Results */
+#results {
+}
+
+#results .scoreboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 500px;
+  justify-items: center;
+  margin: auto;
+  }
+
+/* Rotate 360deg */
+.spin{
+  animation: rotation 1.0s infinite;
+}
+
+@keyframes rotation {
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(360deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+
+/* Disable Animation */
+.noanimation {
+  animation: none !important;
+}
+
+
+/* Restart Button */
+#restart-game{
+  display: flex;
+  justify-content: center;
+}
+
+.restart {
+  height: 40px;
+  width: 7.5vw;
+}
+
+/* Media Queries */
+@media(max-width: 2019px){
+  h1{
+    margin-top:20px
+  }
+  button{
+    width: 180px;
+    height: 180px;
+  }
+  #game #cpu-weapons{
+    height: 180px;
+  }
+  
+}
+
+@media(max-width: 1720px){
+  h1{
+    margin-top:100px;
+    font-size: 50px;
+  }
+  button{
+    width: 160px;
+    height: 160px;
+  }
+  #game #cpu-weapons{
+    height: 160px;
+  }
+}
+
+@media(max-width: 1530px){
+  h1{
+    margin-bottom:100px;
+    margin-top: 30px;
+  }
+}
+
+/* Desktops and large screens */
+@media(max-width: 1269px){
+  button{
+    width: 160px;
+    height: 160px;
+  }
+  #game #cpu-weapons{
+    height: 160px;
+  }
+}
+
+/* 769 - 1024 - Small Screens and laptops */
+@media(max-width: 1024px){
+  h1{
+    font-size: 70px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+  }
+  #restart-game{
+  margin-top: 5px;
+  }
+}
+
+/* 481px to 768px - Ipads/Tablets */
+@media(max-width: 768px){
+  h1{
+    font-size: 45px;
+    margin-top: 80px;
+  }
+
+  button{
+    width: 120px;
+    height: 120px;
+  }
+  #game #cpu-weapons{
+    height: 120px;
+  }
+
+  .restart{
+    width: 150px;
+    padding: 2px;
+  }
+}
+
+/* 320px to 480px - Mobile Devices */
+@media(max-width: 480px){
+  #game #human-weapons{
+    grid-template-columns: 1fr;
+  }
+  #results .scoreboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 320px;
+    justify-items: center;
+    margin: auto;
+    }
+  h1{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  button{
+    width:100px;
+    height: 100px;
+  }
+  h2{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
